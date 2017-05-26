@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>Backbone Baseline</title>
-  <link rel="stylesheet" type="text/css" href="dist/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/foundation.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/colpick.css">
 </head>
 <body>
   <header class="row">
@@ -23,7 +25,7 @@
   </main>
   <footer>
   </footer>
-  <script type="text/javascript" src="dist/bundle.js"></script>
+  <script src="/app.bundle.js" charset="utf-8"></script>
 </body>
 <script id="postit-template" type="text/template">
   <section class="location columns medium-4 postit" style="background: -webkit-linear-gradient(-45deg, <%- color %> 81%,<%- color %> 82%,<%- color %> 82%,#<%- (parseInt(color.substring(1), 16) + 64).toString(16) %> 100%); border-top:60px solid #<%- (parseInt(color.substring(1), 16) + 32).toString(16)%>;">

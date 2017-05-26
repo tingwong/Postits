@@ -1,42 +1,19 @@
-import './styles/foundation.scss';
-import './styles/style.css';
-import './styles/colpick.css';
 import _ from 'underscore';
-import PostitNotes from './collections/postit_notes.js';
-import PostitView from './views/postit_view.js';
-import PostItListView from './views/post_it_list_view.js';
-
-import Postit from './models/postit.js';
+import $ from 'jquery';
 import 'jquery-colpick';
 
 
-var postitStandins = [{
-    text: "This is a test",
+var postitData = [{
+    text: "Backbone is a library not a Framework.",
     color: "#AC1200"
 },
 {
-    text: "Another Test",
+    text: "That means it doesn't dictate to you how the code is structured",
     color: "#752310"
 }];
 
 $(document).ready(function() {
-  $('#example-color').colpick({
-            onSubmit:function(hsb,hex,rgb,el,bySetColor) {
-                $(el).val('#'+hex);
-                $(el).colpickHide();
-            }
-        });
-
-  var postits = new PostitNotes(postitStandins);
-  var postitView = new PostItListView({
-    model: postits,
-    template: _.template($("#postit-template").html()),
-    el: 'main'
-  });
-
-  postitView.render();
-
-
+  console.log("Lets go!");
 });
 
 // end
