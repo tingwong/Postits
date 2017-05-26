@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <title>Backbone Baseline</title>
+  <link rel="stylesheet" type="text/css" href="dist/styles.css">
+</head>
+<body>
+  <header class="row">
+    <h1>Notes!</h1>
+  </header>
+  <main class="row">
+    <aside class="columns medium-4">
+      <label for="text">Text: </label>
+      <textarea id="text" name="text" id="text"></textarea>
+      <label for="color">Color</label>
+      <input type="color" id="color" value="#ffff88" size=8>        <br/>
+      <button class="button success">Create</button>
+    </aside>
+    <section class="columns medium-8" id="postits">
+
+    </section>
+
+  </main>
+  <footer>
+  </footer>
+  <script type="text/javascript" src="dist/bundle.js"></script>
+</body>
+<script id="postit-template" type="text/template">
+  <section class="location columns medium-4 postit" style="background: -webkit-linear-gradient(-45deg, <%- color %> 81%,<%- color %> 82%,<%- color %> 82%,#<%- (parseInt(color.substring(1), 16) + 64).toString(16) %> 100%); border-top:60px solid #<%- (parseInt(color.substring(1), 16) + 32).toString(16)%>;">
+    <p>
+      <%- text %>
+    </p>
+  </section>
+</script>
+</html>
