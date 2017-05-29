@@ -18,7 +18,10 @@
       <input type="color" id="color" value="#ffff88" size=8>        <br/>
       <button class="button success">Create</button>
     </aside>
-    <section class="columns medium-8" id="postits">
+    <section class="columns medium-8" >
+      <section class="row" id="postits">
+
+      </section>
 
     </section>
 
@@ -28,10 +31,15 @@
   <script src="/app.bundle.js" charset="utf-8"></script>
 </body>
 <script id="postit-template" type="text/template">
-  <section class="location columns medium-4 postit" style="background: -webkit-linear-gradient(-45deg, <%- color %> 81%,<%- color %> 82%,<%- color %> 82%,#<%- (parseInt(color.substring(1), 16) + 64).toString(16) %> 100%); border-top:60px solid #<%- (parseInt(color.substring(1), 16) + 32).toString(16)%>;">
+  <div class="columns medium-4">
+
+  <section class="location postit" style="background: -webkit-linear-gradient(-45deg, <%- color %> 81%,<%- color %> 82%,<%- color %> 82%,#<%- (parseInt(color.substring(1), 16) + 64).toString(16) %> 100%); border-top:10px solid #<%- (parseInt(color.substring(1), 16) + 32).toString(16)%>;">
     <p>
       <%- text %>
     </p>
   </section>
+</div>
+
 </script>
 </html>
+
